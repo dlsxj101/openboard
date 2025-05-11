@@ -160,6 +160,12 @@ class HangulCombiner : Combiner {
                             history += currentSyllable.copy(final = jamo)
                         }
                     }
+                    is HangulJamo.NonHangul -> {
+                        // 비한글 입력은 그냥 커밋하고 조합 버퍼 초기화
+                        composingWord.append(currentSyllable.string)
+                        composingWord.append(jamo.string)
+                        history.clear()
+                    }
                 }
             }
         }

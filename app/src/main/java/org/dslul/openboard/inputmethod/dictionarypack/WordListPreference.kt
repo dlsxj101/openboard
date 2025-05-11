@@ -37,6 +37,7 @@ class WordListPreference(context: Context?,
         return status == mStatus
     }
 
+    @Deprecated("Deprecated in Java")
     public override fun onCreateView(parent: ViewGroup): View {
         val orphanedView = mInterfaceState.findFirstOrphanedView()
         if (null != orphanedView) return orphanedView // Will be sent to onBindView
@@ -98,6 +99,7 @@ class WordListPreference(context: Context?,
         setStatus(MetadataDbHelper.Companion.STATUS_DELETING)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBindView(view: View) {
         super.onBindView(view)
         (view as ViewGroup).layoutTransition = null

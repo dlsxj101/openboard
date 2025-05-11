@@ -32,6 +32,7 @@ class DictionarySettingsFragment
     // never null
     private var mCurrentPreferenceMap = TreeMap<String, WordListPreference>()
 
+    @Deprecated("Deprecated in Java")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.loading_page, container, true)
@@ -39,6 +40,7 @@ class DictionarySettingsFragment
         return super.onCreateView(inflater, container, savedInstanceState)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         val activity = activity
@@ -49,6 +51,7 @@ class DictionarySettingsFragment
         setHasOptionsMenu(true)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onResume() {
         super.onResume()
         mChangedSettings = false
@@ -68,6 +71,7 @@ class DictionarySettingsFragment
         }.start()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onPause() {
         super.onPause()
         val activity = activity

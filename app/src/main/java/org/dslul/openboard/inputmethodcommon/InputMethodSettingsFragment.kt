@@ -11,6 +11,7 @@ import android.preference.PreferenceFragment
  */
 abstract class InputMethodSettingsFragment : PreferenceFragment(), InputMethodSettingsInterface {
     private val mSettings = InputMethodSettingsImpl()
+    @Deprecated("Deprecated in Java")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val context: Context = activity
@@ -63,6 +64,7 @@ abstract class InputMethodSettingsFragment : PreferenceFragment(), InputMethodSe
     /**
      * {@inheritDoc}
      */
+    @Deprecated("Deprecated in Java")
     override fun onResume() {
         super.onResume()
         mSettings.updateSubtypeEnabler()

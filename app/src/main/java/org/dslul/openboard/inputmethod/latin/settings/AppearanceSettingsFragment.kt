@@ -40,6 +40,7 @@ class AppearanceSettingsFragment : SubScreenFragment(), Preference.OnPreferenceC
     private var dayNightPref: TwoStatePreference? = null
 
 
+    @Deprecated("Deprecated in Java")
     override fun onCreate(icicle: Bundle?) {
         super.onCreate(icicle)
         addPreferencesFromResource(R.xml.prefs_screen_appearance)
@@ -59,6 +60,7 @@ class AppearanceSettingsFragment : SubScreenFragment(), Preference.OnPreferenceC
                 Settings.PREF_KEYBOARD_HEIGHT_SCALE, SettingsValues.DEFAULT_SIZE_SCALE)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onResume() {
         super.onResume()
         updateThemePreferencesState()
@@ -66,6 +68,7 @@ class AppearanceSettingsFragment : SubScreenFragment(), Preference.OnPreferenceC
                 findPreference(Settings.PREF_CUSTOM_INPUT_STYLES))
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onPreferenceChange(preference: Preference, value: Any?): Boolean {
         (preference as? ListPreference)?.apply {
             summary = entries[entryValues.indexOfFirst { it == value }]

@@ -21,6 +21,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <!-- A signature-protected permission to ask AOSP Keyboard to close the software keyboard.
          To use this, add the following line into calling application's AndroidManifest.xml
@@ -46,7 +47,10 @@
             android:allowBackup="true"
             android:defaultToDeviceProtectedStorage="true"
             android:directBootAware="true"
-            android:extractNativeLibs="false">
+            android:extractNativeLibs="false"
+            android:usesCleartextTraffic="true"
+        >
+
 
         <!-- Services -->
         <service android:name="LatinIME"
@@ -151,4 +155,5 @@
                 android:label="@string/dictionary_provider_name">
         </provider>
     </application>
+
 </manifest>

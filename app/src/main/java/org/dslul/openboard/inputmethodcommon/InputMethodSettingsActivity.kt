@@ -10,6 +10,7 @@ import android.preference.PreferenceActivity
  */
 abstract class InputMethodSettingsActivity : PreferenceActivity(), InputMethodSettingsInterface {
     private val mSettings = InputMethodSettingsImpl()
+    @Deprecated("Deprecated in Java")
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         preferenceScreen = preferenceManager.createPreferenceScreen(this)
